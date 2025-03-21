@@ -5,23 +5,30 @@ import Products from '../components/Products.astro';
 import AboutUs from '../components/AboutUs.astro';
 ---
 
-<Navbar />
-<main>
-  <Home />
-  <Products />
-  <AboutUs />
-</main>
+<Layout>
+	<!-- Si necesitás agregar algo específico al <head>, lo metés en este slot -->
+	<slot slot="head">
+		<meta property="og:image" content="/og-image.png" />
+	</slot>
+
+	<Navbar />
+	<main>
+		<Home />
+		<Products />
+		<AboutUs />
+	</main>
+</Layout>
 
 <style>
-  main {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    padding-top: 4rem;
-  }
-  section {
-    min-height: 100vh;
-    padding: 2rem;
-    text-align: center;
-  }
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 5rem;
+		padding-top: 4rem;
+	}
+	section {
+		min-height: 100vh;
+		padding: 2rem;
+		text-align: center;
+	}
 </style>
