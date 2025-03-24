@@ -1,6 +1,203 @@
 ---
 ---
-<section id="home">
-  <h1>Bienvenido a nuestra página</h1>
-  <p>Explora nuestros productos.</p>
+<section class="section home-container" id="home">
+  <div class="image-overlay"></div>
+
+  <div class='home-content'>
+    <h1 class='home-title'>Young AI Leaders</h1>
+    <span class='home-subtitle'>Buenos Aires Hub</span>
+    <h2>Impulsando la IA para el Bien</h2>
+    <span class='home-span'>Colaboración e innovación global en inteligencia artificial</span>
+    <button>Únete a la comunidad</button>
+  </div>
 </section>
+
+<style>
+
+.section{
+  padding: 0;
+  margin: 0;
+}
+
+.home-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/fondo-home2.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/fondoA.png');
+    background-size: cover;
+    background-position: right center; /* Mantiene la parte derecha visible */
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+
+.home-content {
+    font-family: 'Manrope', sans-serif;
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 70px;
+}
+
+.home-title {
+    cursor: default;
+    margin: 0;
+    font-weight: 700;
+    font-size: 58px;
+    color: #FFFFFF;
+}
+
+
+.home-subtitle{
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 3vh;
+    color: #FFFFFD;
+}
+
+
+.home-content h2{
+    font-weight: 500;
+    margin: 0 0 8px 0;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+.home-span {
+    font-size: 16px;
+    color: #dadada;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.home-content button {
+    font-family: 'Manrope', sans-serif;
+    background-color: #FBD207;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-content button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+@media (max-width: 1024px) {
+
+.home-container {
+    height: 90vh;
+}
+
+.image-overlay {
+    height: 90vh;
+}
+
+.home-title {
+    font-size: 38px;
+}
+
+.home-subtitle{
+    font-size: 28px;
+}
+
+.home-content h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.home-span {
+    font-size: 14px;
+}
+
+}
+
+@media (max-width: 768px) {
+    .home-content{
+        padding: 0;
+        align-items: center;
+    }
+
+    .home-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Oscurece con 20% de negro */
+}
+
+}
+
+@media (max-width: 425px) {
+    .image-overlay {
+        background-image: url('/fondo-home-celu.webp');
+    }
+
+    .home-content{
+        padding: 0 24px 0 24px;
+        align-items: center;
+    }
+
+    .home-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+}
+
+@media (max-width: 375px) {
+    .home-title {
+        font-size: 32px;
+    }
+
+    .home-subtitle {
+        font-size: 26px;
+    }
+
+    .home-content h2 {
+        font-size: 20px;
+    }
+
+    .home-span {
+        font-size: 12px;
+    }
+
+    .home-content button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+</style>

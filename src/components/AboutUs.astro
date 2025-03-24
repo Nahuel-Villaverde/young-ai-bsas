@@ -1,6 +1,428 @@
 ---
 ---
-<section id="about">
-  <h2>Sobre Nosotros</h2>
-  <p>Somos una empresa dedicada a la innovación.</p>
+<section class="aboutContainer" id="about">
+  <div class="container">
+    <div class="item-1"></div>
+    <div class="item-2">
+      <h2 class="title">Nuestro Objetivo</h2>
+      <p class="subtitle">
+        Fomentar la colaboración y la innovación en IA para el bien social
+      </p>
+    </div>
+    <div class="item-3">
+      <p class="leftDescription">
+        Conectamos a jóvenes apasionados por la IA para generar impacto
+        real.
+        <br />
+        <div class="highlightContent">
+          <span class="highlightOne">
+            Aprende, colabora y transforma el
+          </span>
+          <span class="highlightTwo">futuro con innovación.</span>
+        </div>
+      </p>
+      <button class="ctaButton">Conocer más</button>
+    </div>
+    <div class="item">
+      <div class="cardHeader">
+        <div class="iconContainer">
+          <img
+            src="/light_icon.png"
+            alt="Icono de Innovación"
+            class="cardIcon"
+          />
+        </div>
+        <h3>Innovación con Impacto Social</h3>
+      </div>
+      <p class="cardDescription">
+        Desarrollo de proyectos en IA alineados con los ODS de la ONU.
+        Exploramos soluciones tecnológicas que aborden desafíos globales,
+        asegurando que la inteligencia artificial tenga un impacto positivo
+        en la sociedad.
+      </p>
+        <p class="cardNumber">01</p>
+    </div>
+    <div class="item">
+      <div class="cardHeader">
+        <div class="iconContainer">
+          <img
+            src="/world_icon.png"
+            alt="Icono de Colaboración Global"
+            class="cardIcon"
+          />
+        </div>
+        <h3>Colaboración Global</h3>
+      </div>
+      <p class="cardDescription">
+        Una red internacional de jóvenes líderes en IA. Facilitamos la
+        cooperación entre distintos centros y regiones para potenciar la
+        diversidad de ideas y la sinergia entre proyectos.
+      </p>
+        <p class="cardNumber cardNumber2">02</p>
+    </div>
+    <div class="item">
+      <div class="cardHeader">
+        <div class="iconContainer">
+          <img
+            src="/books_icon.png"
+            alt="Icono de Formación y Crecimiento"
+            class="cardIcon"
+          />
+        </div>
+        <h3>Formación y Crecimiento</h3>
+      </div>
+      <p class="cardDescription">
+        Acceso a recursos, mentorías y oportunidades educativas. Brindamos
+        herramientas, guías y capacitaciones para que los miembros puedan
+        desarrollar sus habilidades técnicas y de liderazgo en inteligencia
+        artificial.
+      </p>
+        <p class="cardNumber">03</p>
+    </div>
+    <div class="item">
+      <div class="cardHeader">
+        <div class="iconContainer">
+          <img
+            src="/shake_hands_icon.png"
+            alt="Icono Autonomía con Apoyo"
+            class="cardIcon"
+          />
+        </div>
+        <h3>Autonomía con Apoyo</h3>
+      </div>
+      <p class="cardDescription">
+        Autogestión con apoyo estratégico de la UIT. Cada centro y líder
+        tiene independencia en la ejecución de sus proyectos, con el
+        respaldo de la UIT como entidad orientadora sin intervenir
+        directamente en la gestión.
+      </p>
+        <p class="cardNumber">04</p>
+    </div>
+    <div class="item-3">
+      <p class="leftDescription">
+        <span class="highlightTitle">Rol de la UIT</span>
+        <br />
+        <div class="highlightContent">
+          Proporcionar apoyo y asesoramiento sin intervenir en la gestión de
+          los proyectos.
+        </div>
+      </p>
+      <button class="ctaButton">Conocer más</button>
+    </div>
+  </div>
 </section>
+
+<style>
+
+.aboutContainer {
+  font-family: "Manrope", sans-serif;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+  margin-top: 15vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* La segunda columna ocupa el doble de espacio */
+  grid-template-rows: repeat(3, 1fr);
+  /* 3 filas de igual tamaño */
+  gap: 40px;
+  /* Espacio entre los elementos */
+  width: 90%;
+  margin-top: -20vh;
+}
+
+.item {
+  background-color: #26272b;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 400px;
+  height: 339px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  padding-left: 2.5vw;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+/* Este item ocupará el espacio de dos columnas */
+.item-2 {
+  grid-column: span 2;
+  /* Ocupa dos columnas */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-left: 1vw;
+}
+
+.item-3 {
+  padding-left: 2vw;
+}
+
+.title {
+  font-family: "Manrope", sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  margin: 0;
+  cursor: default;
+}
+
+.subtitle {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  cursor: default;
+}
+
+.leftDescription {
+  max-width: 22vw;
+  margin: 6vh 0vw 0vh 0vh;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: default;
+}
+
+.highlightContent {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  margin-top: 1vh;
+  font-size: 16px;
+  cursor: default;
+}
+
+.highlightOne,
+.highlightTwo {
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    #fbd207 0%,
+    #51ff00 32%,
+    #04e9b3 67%,
+    #c156ff 100%
+  );
+  -webkit-background-clip: text;
+  /* Asegura que el gradiente se aplique solo al texto */
+  color: transparent;
+  /* Hace que el texto sea transparente para mostrar el gradiente */
+  letter-spacing: 0.6px;
+}
+
+.highlightTwo {
+  display: block;
+}
+
+.ctaButton {
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  height: 42px;
+  width: 162px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5.5vh;
+}
+
+.ctaButton:hover {
+  background-color: white;
+  color: #000106;
+  border: 2px solid white;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 2vh;
+}
+
+.cardHeader h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.iconContainer {
+  background-color: rgba(0, 0, 0, 0.26);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.cardIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.cardDescription {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  width: 314px;
+  text-align: left;
+  color: #dadada;
+  padding-right: 1vw;
+}
+
+.cardNumber {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  align-self: end;
+  position: absolute;
+  bottom: -35px;
+  font-family: 'Inter', sans-serif;
+  font-size: 128px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.1);
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  right: 5px;
+}
+
+/* Aplica el degradado cuando el usuario pase por la tarjeta */
+.item:hover .cardNumber {
+  background: linear-gradient(90deg, #ffffff 0%, #999999 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.highlightTitle {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  background: linear-gradient(
+    90deg,
+    #fbd207 0%,
+    #51ff00 32%,
+    #04e9b3 67%,
+    #c156ff 100%
+  );
+  -webkit-background-clip: text; /* Asegura que el gradiente se aplique solo al texto */
+  color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente */
+  letter-spacing: 0.6px;
+}
+
+@media (max-width: 1024px) {
+  .cardDescription {
+    font-size: 12px;
+    width: auto;
+  }
+
+  .item {
+    padding-right: 2.5vw;
+  }
+
+  .cardHeader {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .cardHeader h3 {
+    width: 165px;
+  }
+}
+
+@media (max-width: 1010px) {
+  .cardDescription {
+    font-size: 16px;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+  }
+
+  .item {
+    max-width: 100%;
+    height: auto;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-bottom: 25vh;
+  }
+
+  .cardDescription {
+    width: auto;
+    padding: 0 2vw;
+  }
+
+  .cardHeader h3 {
+    width: auto;
+    font-size: 18px;
+  }
+
+  .cardNumber {
+    font-size: 128px;
+  }
+
+  .item-3 {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .leftDescription {
+    max-width: 45vw;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    max-width: 70%;
+    padding: 0vh 4vw 25vh 4vw;
+    height: auto;
+  }
+
+  .cardHeader h3 {
+    font-size: 16px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .cardNumber {
+    font-size: 128px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 180px;
+    margin-top: 4vh;
+  }
+}
+
+</style>

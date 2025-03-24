@@ -4,6 +4,10 @@ import Navbar from '../components/Navbar.astro';
 import Home from '../components/Home.astro';
 import Products from '../components/Products.astro';
 import AboutUs from '../components/AboutUs.astro';
+import Comunity from '../components/Comunity.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+
 ---
 
 <Layout>
@@ -15,8 +19,11 @@ import AboutUs from '../components/AboutUs.astro';
 	<Navbar />
 	<main>
 		<Home />
-		<Products />
 		<AboutUs />
+		<Comunity />
+		<Projects />
+		<Contact />
+		<Products />
 	</main>
 </Layout>
 
@@ -25,7 +32,7 @@ import AboutUs from '../components/AboutUs.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 5rem;
-		padding-top: 4rem;
+		padding-top: 0;
 	}
 	section {
 		min-height: 100vh;
