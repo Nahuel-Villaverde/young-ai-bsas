@@ -63,6 +63,12 @@
     <button class="button-comnidad-2">Explorar proyectos</button>
   </div>
 
+
+  <div class="lideres-title">
+    <h2>Estructura de la Comunidad</h2>
+    <p>Nuestra comunidad se organiza en distintos niveles de liderazgo para maximizar el impacto y la colaboración. Cada rol cumple una función clave, desde la gestión local hasta la conexión global, asegurando que los proyectos en IA generen un verdadero cambio.</p>
+  </div>
+
   <div class="cards-container">
     <div class="card">
       <img src="/Seba.webp" alt="Imagen de Lider del Centro" />
@@ -245,6 +251,7 @@
       color 0.3s ease;
     border-radius: 10px;
     padding: 1vw;
+    border: 2px solid transparent;
   }
 
   .button-comnidad-1:hover {
@@ -351,6 +358,27 @@
     transform: scale(1.1);
   }
 
+  .lideres-title{
+    font-family: "Manrope", sans-serif;
+    color: #ffffff;
+    padding: 30px;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .lideres-title h2{
+    font-weight: 700;
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+
+  .lideres-title p{
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 800px;
+  }
+
+
   @media (max-width: 1024px) {
     .card-content h3 {
       font-size: 16px;
@@ -407,8 +435,15 @@
       margin: 160px 80px;
     }
 
+    .card-content{
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding-bottom: 20px;
+    }
+
     .buttons-comnidad-container {
       flex-direction: column;
+      gap: 24px;
     }
   }
 
