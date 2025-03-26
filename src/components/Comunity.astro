@@ -395,7 +395,7 @@
 
   @media (max-width: 768px) {
     .comunidad-section {
-      margin: 160px 60px;
+      margin: 160px 70px;
     }
 
     .cards-container {
@@ -411,10 +411,7 @@
     .leader-linkedin {
       margin: 0;
     }
-  }
 
-  /* ✅ 425px (Móviles grandes) */
-  @media (max-width: 640px) {
     .grid-container {
       display: flex;
       flex-direction: column;
@@ -431,10 +428,6 @@
       max-width: 90%; /* Se ajusta al ancho de la pantalla */
     }
 
-    .comunidad-section {
-      margin: 160px 80px;
-    }
-
     .card-content{
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
@@ -445,9 +438,52 @@
       flex-direction: column;
       gap: 24px;
     }
+
+    .button-comnidad-1{
+      padding: 8px 4px;
+    }
+
+    .button-comnidad-2{
+      padding: 8px 4px;
+    }
+
+    .lideres-title{
+      padding: 0;
+    }
+
   }
 
-  /* ✅ 375px (Móviles medianos) */
+  @media (max-width: 640px) {
+    .comunidad-section {
+        margin: 160px 70px;
+    }
+
+    .grid-item{
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .grid-item h2{
+      font-size: 28px;
+    }
+
+    .lideres-title h2 {
+    font-size: 28px;
+    margin-bottom: 0;
+    }
+
+    .lideres-title p{
+      margin-top: 4px;
+    }
+
+  }
+
+  @media (max-width: 445px) {
+    .comunidad-section {
+      margin: 160px 24px;
+    }
+  }
+
   @media (max-width: 375px) {
     .card {
       max-width: 100%;
