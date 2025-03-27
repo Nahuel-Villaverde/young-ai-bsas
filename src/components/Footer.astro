@@ -75,7 +75,7 @@
 
         <div class="area_5">
             <a href="#" rel="noopener noreferrer">
-                <p class="termino_y_condiciones">Términos y Condiciones</p>
+                <p class="termino_y_condiciones">Desarrollado por Yana Web Studio</p>
             </a>
         </div>
     </div>
@@ -101,6 +101,7 @@
 }
 
 .footer {
+  font-family: "Manrope", sans-serif;
   background-color: #ffffff;
   position: relative;
   width: 100%;
@@ -109,17 +110,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .fondo-imagen {
   position: absolute;
-  left: 44vw;
+
   top: 50%;
   max-width: 450px;
   min-height: 422px;
   transform: translateY(-50%);
   opacity: 0.1;
   z-index: 0;
+  height: 100%;
 }
 
 .container_display_grid {
@@ -167,6 +170,14 @@
   justify-content: flex-end;
 }
 
+.area_5 a {
+  text-decoration: none;
+}
+
+.area_5 a:hover {
+  text-decoration: underline;
+}
+
 .linea-div3 {
   width: 100%;
   height: 1px;
@@ -175,13 +186,16 @@
 }
 
 .derechos {
-  font-family: "Manrope_Regular";
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   color: #000000;
+  cursor: default;
 }
 
 .termino_y_condiciones {
-  font-family: "Manrope_Regular";
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   color: #000000;
   cursor: pointer;
@@ -190,18 +204,22 @@
 
 .logo_title {
   color: #000000;
-  font-family: "Manrope_Bold";
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
   font-size: 24px;
   margin: 0;
   max-width: 472px;
+  cursor: default;
 }
 
 .logo_subtitle {
   color: #000000;
-  font-family: "Manrope_Regular";
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
   margin: 0;
   font-size: 16px;
   margin-top: 2vh;
+  cursor: default;
 }
 
 .icon_footer img {
@@ -229,7 +247,8 @@
 }
 
 .footer-link {
-  font-family: "Manrope_Bold";
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
   font-size: 24px;
   color: #000000;
   text-decoration: none;
