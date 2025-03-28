@@ -388,50 +388,67 @@
     }
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     .container {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 0 16px;
-      box-sizing: border-box;
     }
 
-    .item {
-      width: 100%;
-      max-width: 500px; /* ✔️ Limita el ancho para que no se vea estirada */
-      margin: 0 auto;
-      padding: 24px;
+    .item-2 {
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     .item-3 {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 0 24px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .item {
+      padding-right: 6vw;
+      padding-left: 6vw;
+    }
+
+    .leftDescription {
+      max-width: none;
+      margin-top: 0;
+    }
+
+    .ctaButton {
+      width: 35%;
+      font-size: 13px;
+    }
+
+    .title {
+      font-size: 28px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 410px) {
+    .cardHeader h3 {
+      font-size: 15px;
     }
 
     .cardDescription {
-      font-size: 14px;
-      padding: 0;
-      width: 100%;
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .cardHeader h3 {
+      font-size: 13px;
     }
 
-    .cardHeader h3 {
-      font-size: 16px;
+    .cardDescription {
+      font-size: 11px;
     }
 
     .ctaButton {
       width: 100%;
-      max-width: 160px;
-      margin-top: 4vh;
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 425px) {
-    .item {
-      max-width: 75%;
     }
   }
 </style>
