@@ -29,10 +29,10 @@ function Contacto() {
           <h3 className="contact-subtitle">Si quieres saber más sobre Young AI Leaders, colaborar en un proyecto o postularte como miembro, estamos aquí para ayudarte.</h3>
           <span className="contact-span">Más de 100 jóvenes líderes en IA colaborando en <br /> <span className="multicolor">proyectos globales.</span></span>
           <div className="contact-icons">
-            <a href="mailto:contacto@ejemplo.com" className="icon gmail-icon">
+            <a href="mailto:buenosaireshub.youngaileaders@gmail.com" className="icon gmail-icon">
               <img src="/gmail.webp" alt="Imagen con redirección a Gmail" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="icon linkedin-icon">
+            <a href="https://www.linkedin.com/company/young-ai-leaders-buenos-aires-hub/" target="_blank" rel="noopener noreferrer" className="icon linkedin-icon">
               <img src="/linkedin.webp" alt="Imagen con redirección a LinkedIn" />
             </a>
           </div>
