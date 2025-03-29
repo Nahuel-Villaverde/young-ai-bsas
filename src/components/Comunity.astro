@@ -25,7 +25,7 @@
       <ul class="stats-list">
         <li>Asistir a reuniones mensuales.</li>
         <li>
-          Participar en al menos un proyecto específi co del centro por año.
+          Participar en al menos un proyecto específico del centro por año.
         </li>
         <li>Participar en al menos 1 proyecto con AI for Good por año.</li>
         <li>Colabora con al menos otro centro, dentro o fuera de tu región.</li>
@@ -43,24 +43,26 @@
     <div class="grid-item">
       <div class="stats-metrics">
         <div class="metric">
-          <span class="stat-number">+20</span>
-          <span class="stat-label">Centros Activos</span>
+          <span class="stat-number" data-target="13">0</span>
+          <span class="stat-label">Miembros</span>
         </div>
         <div class="metric">
-          <span class="stat-number">+12</span>
-          <span class="stat-label">Países Representados</span>
-        </div>
-        <div class="metric">
-          <span class="stat-number">+300</span>
-          <span class="stat-label">Proyectos Desarrollados</span>
+          <span class="stat-number" data-target="2">0</span>
+          <span class="stat-label">Socios</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="buttons-comnidad-container">
-    <button class="button-comnidad-1" onclick="location.href='#contact'">Únete a la comunidad</button>
-    <button class="button-comnidad-2" onclick="window.open('https://www.linkedin.com/company/young-ai-leaders-buenos-aires-hub/', '_blank')">Explorar proyectos</button>
+    <button class="button-comnidad-1" onclick="location.href='#contact'"
+      >Únete a la comunidad</button
+    >
+    <button
+      class="button-comnidad-2"
+      onclick="window.open('https://www.linkedin.com/company/young-ai-leaders-buenos-aires-hub/', '_blank')"
+      >Explorar proyectos</button
+    >
   </div>
 
   <div class="lideres-title">
@@ -135,6 +137,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
   }
 
   .grid-container {
@@ -154,8 +157,9 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
+    justify-content: center;
   }
 
   .grid-item h2 {
@@ -225,6 +229,7 @@
   .stat-number {
     font-size: 24px;
     font-weight: bold;
+    transition: all 0.3s ease;
   }
 
   .stat-label {
@@ -490,7 +495,6 @@
   }
 
   @media (max-width: 375px) {
-    
   }
 
   /* ✅ 320px (Móviles pequeños) */
@@ -512,3 +516,42 @@
     }
   }
 </style>
+
+<script is:inline>
+  function animateCounter(el, target, duration = 1000) {
+    let start = 0;
+    let startTime = null;
+
+    const step = timestamp => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      el.textContent = Math.floor(progress * target);
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target;
+      }
+    };
+
+    requestAnimationFrame(step);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll(".stat-number");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10);
+          animateCounter(el, target);
+          observer.unobserve(el); // evita reanimaciones
+        }
+      });
+    }, { threshold: 0.6 });
+
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+  });
+</script>
