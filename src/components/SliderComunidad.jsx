@@ -67,67 +67,6 @@ const miembros = [
     img: "/Nicolas-Massucci.webp",
     linkedin: "https://www.linkedin.com/in/nicolasmassucci/",
   },
-  {
-    id: 11,
-    nombre: "Victoria Franco",
-    img: "/Victoria-Franco.webp",
-    linkedin: "https://www.linkedin.com/in/victoriafranco24/",
-  },
-  {
-    id: 12,
-    nombre: "Milagros Singer",
-    img: "/Milagros-Singer.webp",
-    linkedin: "https://www.linkedin.com/in/milagros-singer-gonzalez/",
-  },
-  {
-    id: 13,
-    nombre: "Mathias Ramos Cuñarro",
-    img: "/Mathias-Ramos-Cuñarro.webp",
-    linkedin: "https://www.linkedin.com/in/mathiasramosc/",
-  },
-  {
-    id: 14,
-    nombre: "Julián Asinsten",
-    img: "/Julián-Asinsten.webp",
-    linkedin: "https://www.linkedin.com/in/juli%C3%A1n-asinsten-247636261/",
-  },
-  {
-    id: 15,
-    nombre: "Lucía Scorzelli",
-    img: "/Lucía-Scorzelli.webp",
-    linkedin:
-      "https://www.linkedin.com/in/lucia-scorzelli-vald%C3%A9s-09398a233/",
-  },
-  {
-    id: 16,
-    nombre: "Agustín Fernandes",
-    img: "/Agustín-Fernandes.webp",
-    linkedin: "https://www.linkedin.com/in/agustinjoelfernandescabal/",
-  },
-  {
-    id: 17,
-    nombre: "Candela Sosa Medina",
-    img: "/Candela-Sosa-Medina.webp",
-    linkedin: "https://www.linkedin.com/in/candela-sosa-medina-618224354/",
-  },
-  {
-    id: 18,
-    nombre: "Camila Lescano",
-    img: "/Camila-Lescano.webp",
-    linkedin: "https://www.linkedin.com/in/camilaagostinalescano/",
-  },
-  {
-    id: 19,
-    nombre: "Rocío Palacín",
-    img: "/Rocío-Palacín.webp",
-    linkedin: "https://www.linkedin.com/in/roc%C3%ADo-palac%C3%ADn-roitbarg/",
-  },
-  {
-    id: 20,
-    nombre: "Nicolas Massucci",
-    img: "/Nicolas-Massucci.webp",
-    linkedin: "https://www.linkedin.com/in/nicolasmassucci/",
-  },
 ];
 
 function SliderComunidad() {
