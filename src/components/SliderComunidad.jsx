@@ -67,6 +67,18 @@ const miembros = [
     img: "/Nicolas-Massucci.webp",
     linkedin: "https://www.linkedin.com/in/nicolasmassucci/",
   },
+  {
+    id: 11,
+    nombre: "Camila Valenzuela",
+    img: "/Camila-Valenzuela.webp",
+    linkedin: "https://www.linkedin.com/in/camila-valenzuela-8a045b15a/",
+  },
+  {
+    id: 12,
+    nombre: "Yago Zaragoza",
+    img: "/Yago-Zaragoza.webp",
+    linkedin: "https://www.linkedin.com/in/yago-zaragoza-79353b296/",
+  },
 ];
 
 function SliderComunidad() {
