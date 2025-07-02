@@ -20,10 +20,10 @@ export default function Navbar() {
       {/* Menú */}
       <nav className={`nav ${menuOpen ? "open" : ""}`}>
         <ul className="nav-links">
-          <li><a href="#about" className="nav-item" onClick={() => setMenuOpen(false)}>Sobre nosotros</a></li>
+          <li><a href="#about" className="nav-item" onClick={() => setMenuOpen(false)}>Nuestros principios</a></li>
           <li><a href="#community" className="nav-item" onClick={() => setMenuOpen(false)}>Comunidad</a></li>
-          <li><a href="#socios" className="nav-item" onClick={() => setMenuOpen(false)}>Socios</a></li>
-          <li><a href="#contact" className="nav-item" onClick={() => setMenuOpen(false)}>Contacto</a></li>
+          <li><a href="#socios" className="nav-item" onClick={() => setMenuOpen(false)}>Quienes somos</a></li>
+          <li><a href="#contact" className="nav-item" onClick={() => setMenuOpen(false)}>Conocé más</a></li>
         </ul>
       </nav>
     </header>

@@ -6,13 +6,17 @@
   <h2 class="socios-title">Nuestros Socios</h2>
   <div class="icons-container">
     <div class="icon icon-socios">
-      <img src="/Uba-ciencias-politicas-icon.webp" alt="Icono Uba ciencias politicas" />
+      <img
+        src="/Uba-ciencias-politicas-icon.webp"
+        alt="Icono Uba ciencias politicas"
+      />
       <div class="uba-container">
         <span class="uba-span">Ciencia</span>
         <span class="uba-span">Política</span>
-        <span class="uba-description">.UBA <span class="palabra-uba">sociales</span></span>
+        <span class="uba-description"
+          >.UBA <span class="palabra-uba">sociales</span></span
+        >
       </div>
-      
     </div>
     <div class="icon icon-socios">
       <img src="/redappe.webp" alt="icono redappe" />
@@ -21,90 +25,89 @@
 </section>
 
 <style>
-  .socios-container{
+  .socios-container {
     scroll-margin-top: 80px;
   }
 
-  .socios-title{
+  .socios-title {
     text-align: center;
-    font-family: 'Manrope', sans-serif;
-    color: #cfcfcf;
-    font-weight: 800;
+    font-family: "Manrope", sans-serif;
+    color: #ffffff;
+    font-weight: 600;
     font-size: 32px;
     margin-bottom: 40px;
+    letter-spacing: 4px;
   }
 
-  .icons-container{
+  .icons-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 0 70px;
   }
 
-  .icon img{
+  .icon img {
     width: auto;
   }
 
-  .icon{
+  .icon {
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
   }
 
-  .icon:hover{
+  .icon:hover {
     transform: scale(1.1);
   }
 
-  .uba-container{
+  .uba-container {
     display: flex;
     flex-direction: column;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     color: #ffffff;
     font-weight: 600;
     font-size: 18px;
     margin-left: 8px;
   }
 
-  .uba-description{
+  .uba-description {
     font-size: 12px;
   }
 
-  .palabra-uba{
+  .palabra-uba {
     font-weight: 400;
   }
 
   @media (max-width: 768px) {
-    .socios-title{
-    font-size: 18px;
-  }
+    .socios-title {
+      font-size: 18px;
+    }
 
-  .uba-container{
-    font-size: 14px;
-  }
+    .uba-container {
+      font-size: 14px;
+    }
 
-  .uba-description{
-    font-size: 10px;
-  }
+    .uba-description {
+      font-size: 10px;
+    }
 
-  .icon-socios img{
-    height: 30px;
-  }
-
+    .icon-socios img {
+      height: 30px;
+    }
   }
 
   @media (max-width: 425px) {
-    .icons-container{
-    margin: 0 25px;
-  }
+    .icons-container {
+      margin: 0 25px;
+    }
 
-  .uba-container {
-    font-size: 12px;
-  }
+    .uba-container {
+      font-size: 12px;
+    }
 
-  .icon-socios img{
-    height: 20px;
-  }
-
+    .icon-socios img {
+      height: 20px;
+    }
   }
 </style>
