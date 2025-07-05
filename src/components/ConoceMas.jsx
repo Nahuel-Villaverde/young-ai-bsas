@@ -34,13 +34,15 @@ export default function ConoceMas() {
                   src={video.url}
                   alt={`Video ${video.id}`}
                   className={
-                    index === activeIndex ? 'main-slide' : 'side-slide'
+                    index === activeIndex ? 'main-slide' : 'side-slide fade-edge'
                   }
                 />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="fade-mask left"></div>
+        <div className="fade-mask right"></div>
       </div>
     </div>
   );
