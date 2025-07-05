@@ -6,20 +6,22 @@
   <h2 class="socios-title">Nuestros Socios</h2>
   <div class="icons-container">
     <div class="icon icon-socios">
-      <img
-        src="/Uba-ciencias-politicas-icon.webp"
-        alt="Icono Uba ciencias politicas"
-      />
-      <div class="uba-container">
-        <span class="uba-span">Ciencia</span>
-        <span class="uba-span">Política</span>
-        <span class="uba-description"
-          >.UBA <span class="palabra-uba">sociales</span></span
-        >
-      </div>
+      <img src="/CP-icon.png" alt="icono redappe" />
     </div>
     <div class="icon icon-socios">
       <img src="/redappe.webp" alt="icono redappe" />
+    </div>
+    <div class="icon icon-socios">
+      <img src="/AsuntosDelSur.png" alt="icono asuntos del sur" />
+    </div>
+    <div class="icon icon-socios">
+      <img src="/UP-icon.png" alt="icono universidad de palermo" />
+    </div>
+    <div class="icon icon-socios">
+      <img src="/Girl-Up.png" alt="icono girl up" />
+    </div>
+    <div class="icon icon-socios">
+      <img class="up" src="/SAIA.png" alt="icono saia" />
     </div>
   </div>
 </section>
@@ -27,6 +29,7 @@
 <style>
   .socios-container {
     scroll-margin-top: 80px;
+    padding-bottom: 50px; /* Añade un poco de espacio abajo si los iconos se envuelven */
   }
 
   .socios-title {
@@ -41,13 +44,29 @@
 
   .icons-container {
     display: flex;
+    /* CAMBIO CLAVE: Permite que los elementos se envuelvan a la siguiente línea */
+    flex-wrap: wrap;
+    /* Ajusta cómo se distribuyen los elementos en cada línea */
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; /* Centra los elementos verticalmente en cada fila (útil si los iconos tienen alturas ligeramente diferentes por algún motivo) */
     margin: 0 70px;
+    min-height: 80px;
+    /* Nuevo: Espacio entre las filas y columnas. Ajusta según sea necesario */
+    gap: 30px; /* Un espacio de 30px entre los íconos (tanto horizontal como vertical) */
   }
 
   .icon img {
-    width: auto;
+    height: 60px;
+    width: 100px; /* Esto define la "caja" que cada imagen intenta ocupar */
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Si 'up' no es necesaria para un estilo único, puedes quitarla */
+  .up {
+    /* Puedes mantenerla si quieres sobrescribir el ancho o alto para SAIA específicamente */
+    /* Por ejemplo, si SAIA es muy ancha y quieres darle más espacio horizontalmente */
+    /* width: 120px; */
   }
 
   .icon {
@@ -55,6 +74,12 @@
     align-items: center;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    /* Ya no es necesario padding en el .icon si usas gap en el .icons-container */
+    /* padding: 10px; */
+    /* Si quieres un tamaño mínimo para el contenedor del icono (el div) para que todos se comporten igual al envolver */
+    flex-basis: 120px; /* Dale una base flexible a cada icono, un poco más que el ancho de la imagen */
+    max-width: 150px; /* O un max-width para evitar que se estiren demasiado */
+    justify-content: center; /* Centra el contenido (imagen y texto UBA) dentro de su propia caja flex */
   }
 
   .icon:hover {
@@ -79,9 +104,26 @@
     font-weight: 400;
   }
 
+
   @media (max-width: 768px) {
     .socios-title {
       font-size: 18px;
+    }
+
+    .icons-container {
+      margin: 0 40px;
+      min-height: 60px;
+      gap: 20px; /* Ajusta el gap para pantallas más pequeñas */
+    }
+
+    .icon img {
+      height: 40px;
+      width: 70px;
+    }
+
+    .icon {
+      flex-basis: 80px; /* Ajusta la base flexible para mobile */
+      max-width: 100px;
     }
 
     .uba-container {
@@ -91,23 +133,27 @@
     .uba-description {
       font-size: 10px;
     }
-
-    .icon-socios img {
-      height: 30px;
-    }
   }
 
   @media (max-width: 425px) {
     .icons-container {
       margin: 0 25px;
+      min-height: 40px;
+      gap: 15px; /* Ajusta el gap para mobile muy pequeño */
     }
 
     .uba-container {
       font-size: 12px;
     }
 
-    .icon-socios img {
-      height: 20px;
+    .icon img {
+      height: 30px;
+      width: 50px;
+    }
+
+    .icon {
+      flex-basis: 60px; /* Ajusta la base flexible para mobile más pequeño */
+      max-width: 80px;
     }
   }
 </style>
