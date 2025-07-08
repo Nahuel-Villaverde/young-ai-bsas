@@ -4,11 +4,7 @@ import 'swiper/css';
 import './ConoceMas.css';
 
 const videos = [
-  { id: '0', url: 'https://img.youtube.com/vi/kXYiU_JCYtU/hqdefault.jpg' },
-  { id: '1', url: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg' },
-  { id: '2', url: 'https://img.youtube.com/vi/3tmd-ClpJxA/hqdefault.jpg' },
-  { id: '3', url: 'https://img.youtube.com/vi/L_jWHffIx5E/hqdefault.jpg' },
-  { id: '4', url: 'https://img.youtube.com/vi/tVj0ZTS4WF4/hqdefault.jpg' },
+  { id: '0', url: 'https://img.youtube.com/vi/ddbEg_pB0tQ/hqdefault.jpg' },
 ];
 
 export default function ConoceMas() {
