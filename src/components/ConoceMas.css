@@ -1,43 +1,40 @@
 .conoce-section {
   display: flex;
-  text-align: center;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  background: #000;
+  text-align: center;
   padding-bottom: 3rem;
+  position: relative;
 }
 
 .title {
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
-  font-size: 38px;
+  font: 700 38px/1 "Manrope", sans-serif;
   margin-bottom: 100px;
   background: linear-gradient(90deg, #fbd207, #51ff00, #04e9b3, #c156ff);
   -webkit-background-clip: text;
   color: transparent;
-  max-width: 228px;
 }
 
+.swiper-horizontal {
+  display: grid;
+}
+
+/* ---------- slider ---------- */
 .conoceSwiper {
   width: 100%;
   max-width: 1280px;
-  margin: auto;
   height: 300px;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  justify-content: center;
 }
-
+.center-few .swiper-wrapper {
+  justify-content: center;
+}
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.swiper-wrapper {
-  align-items: center;
-  transition-property: transform;
 }
 
 .slide-wrapper {
@@ -46,30 +43,23 @@
   align-items: center;
   height: 100%;
 }
-
-img {
+.slide-wrapper img {
   border-radius: 1rem;
   object-fit: cover;
-  transition: all 0.4s ease-in-out;
+  transition: 0.4s;
 }
 
 .main-slide {
   width: 440px;
   height: 248px;
   opacity: 1;
-  pointer-events: auto;
 }
-
 .side-slide {
   width: 280px;
   height: 160px;
   opacity: 0.4;
   pointer-events: none;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-
-.fade-edge {
-  animation: fadeEdge 0.6s ease-in-out;
+  box-shadow: 0 5px 15px #000106;
 }
 
 @keyframes fadeEdge {
@@ -82,38 +72,160 @@ img {
     transform: scale(1);
   }
 }
+.fade-edge {
+  animation: fadeEdge 0.6s ease;
+}
 
-/* Máscaras en los bordes */
 .fade-mask {
   position: absolute;
   top: 0;
   width: 120px;
   height: 100%;
-  z-index: 5;
   pointer-events: none;
+  z-index: 5;
 }
-
 .fade-mask.left {
   left: 0;
-  background: linear-gradient(to right, #000 50%, transparent 100%);
 }
-
 .fade-mask.right {
   right: 0;
-  background: linear-gradient(to left, #000 50%, transparent 100%);
+}
+.animated-mask {
+  background: linear-gradient(to right, #000106 50%, transparent 100%);
+  animation: maskPulse 2s infinite alternate;
+}
+.fade-mask.right.animated-mask {
+  background: linear-gradient(to left, #000106 50%, transparent 100%);
+}
+@keyframes maskPulse {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
 
+/* ---------- borde animado (slide central) ---------- */
+.bordered-glow {
+  position: relative;
+  border-radius: 1rem;
+}
+.bordered-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #fbd207, #51ff00, #04e9b3, #c156ff);
+  background-size: 400%;
+  animation: glow 5s linear infinite;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+@keyframes glow {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+/* ---------- modal ---------- */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+.fade-in {
+  animation: modalFadeIn 0.4s both;
+}
+.fade-out {
+  animation: modalFadeOut 0.4s both;
+}
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: black;
+}
+.animate-in {
+  animation: contentIn 0.4s both;
+}
+.animate-out {
+  animation: contentOut 0.4s both;
+}
+@keyframes contentIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes contentOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 24px;
+  padding: 4px 12px;
+  background: #0008;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* ---------- responsive ---------- */
 @media (max-width: 768px) {
   .main-slide {
     width: 320px;
     height: 180px;
   }
-
   .side-slide {
     width: 200px;
     height: 120px;
   }
-
   .fade-mask {
     width: 80px;
   }
