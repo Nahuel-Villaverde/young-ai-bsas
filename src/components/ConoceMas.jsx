@@ -5,7 +5,10 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "./ConoceMas.css";
 
-const videos = [{ id: "PgMwpmldJVA" }, { id: "ddbEg_pB0tQ" }];
+const videos = [
+  { id: "PgMwpmldJVA" },
+  { id: "ddbEg_pB0tQ" },
+];
 
 export default function ConoceMas() {
   const [active, setActive] = useState(0);
@@ -39,9 +42,8 @@ export default function ConoceMas() {
           spaceBetween={30}
           freeMode={true}
           grabCursor={true}
-          loop={true}
+          loop={false}
           centeredSlides={true}
-          watchSlidesProgress={true}
           onSlideChange={(s) => setActive(s.realIndex)}
         >
           {videos.map((v, i) => (
