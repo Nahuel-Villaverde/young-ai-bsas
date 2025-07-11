@@ -46,6 +46,7 @@
 .slide-wrapper img {
   border-radius: 1rem;
   object-fit: cover;
+  pointer-events: none;
   transition: 0.4s;
 }
 
@@ -68,6 +69,10 @@
 
 .swiper {
   cursor: grab;
+}
+
+.swiper-grab-cursor {
+  cursor: grabbing !important;
 }
 
 @keyframes fadeEdge {
