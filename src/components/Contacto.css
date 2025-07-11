@@ -1,11 +1,11 @@
 .contact-section {
   padding: 70px;
-  padding-top: 100px;
+  padding-top: 0;
   padding-bottom: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 .contact-container {
@@ -65,13 +65,13 @@
   flex-direction: column;
   justify-content: center;
   max-width: 400px;
-  background-color: #26272B;
+  background-color: #26272b;
   padding: 40px;
   border-radius: 10px;
 }
 
 .form-title {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 24px;
   color: #ffffff;
   margin-bottom: 35px;
@@ -85,7 +85,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
 }
 
 .form-input,
@@ -101,7 +100,7 @@
 }
 
 .contact-form ::placeholder {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 14px;
   color: #737374;
   font-weight: 500;
@@ -113,7 +112,7 @@
 }
 
 .submit-button {
-  background-color: #FBD207;
+  background-color: #fbd207;
   color: white;
   border: none;
   padding: 10px;
@@ -127,7 +126,7 @@
 }
 
 .submit-button:hover {
-  background-color: #000000;
+  background-color: #2c2c2c;
   color: white;
 }
 
@@ -139,16 +138,21 @@
 .multicolor {
   font-weight: 400;
   font-size: 16px;
-  background: linear-gradient(90deg, #FBD207 0%, #51FF00 32%, #04E9B3 67%, #C156FF 100%);
+  background: linear-gradient(
+    90deg,
+    #fbd207 0%,
+    #51ff00 32%,
+    #04e9b3 67%,
+    #c156ff 100%
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .contact-span {
   font-weight: 400;
-  color: #DADADA;
+  color: #dadada;
   font-size: 16px;
-
 }
 
 @media (max-width: 1440px) {
@@ -163,7 +167,6 @@
   .contact-subtitle {
     font-size: 16px;
   }
-
 }
 
 @media (max-width: 1024px) {
@@ -189,7 +192,6 @@
   .form-title {
     padding: 0 40px 0 40px;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -209,7 +211,7 @@
 
   .contact-span {
     font-weight: 400;
-    color: #DADADA;
+    color: #dadada;
     font-size: 14px;
   }
 
@@ -270,5 +272,4 @@
   .multicolor {
     font-size: 13px;
   }
-
 }

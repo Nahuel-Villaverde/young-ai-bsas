@@ -1,58 +1,69 @@
-import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import './ConoceMas.css';
+import { useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "./ConoceMas.css";
 
-const videos = [
-  { id: 'PgMwpmldJVA' },
-  { id: 'ddbEg_pB0tQ' },
-];
+const videos = [{ id: "PgMwpmldJVA" }, { id: "ddbEg_pB0tQ" }, { id: "" }];
 
 export default function ConoceMas() {
-  const [activeIndex, setActiveIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef(null);
 
   const openModal = (videoId) => {
     setSelectedVideo(videoId);
     setShowModal(true);
-    document.body.style.overflow = 'hidden'; // bloquear scroll
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setShowModal(false);
     setSelectedVideo(null);
-    document.body.style.overflow = 'auto'; // restaurar scroll
+    document.body.style.overflow = "auto";
+  };
+
+  const getSlideClass = (index) => {
+    const centerIndex = (activeIndex + 1) % videos.length;
+    return index === centerIndex
+      ? "main-slide bordered-glow"
+      : "side-slide fade-edge";
+  };
+
+  const handleSlideClick = (index, videoId) => {
+    const centerIndex = (activeIndex + 1) % videos.length;
+    if (index === centerIndex) {
+      openModal(videoId);
+    } else {
+      swiperRef.current.slideToLoop(index); // desplaza ese slide al centro
+    }
   };
 
   return (
     <div className="conoce-section">
-      <h2 className="title">Conocé más</h2>
+      <h2 className="title" id="conoceMasTitle">
+        Conocé más
+      </h2>
       <div className="conoceSwiper">
         <Swiper
           slidesPerView={3}
-          centeredSlides={true}
-          spaceBetween={30}
+          centeredSlides={false}
+          spaceBetween={0}
           grabCursor={true}
           loop={true}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          onSwiper={(swiper) => setActiveIndex(swiper.realIndex)}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {videos.map((video, index) => (
-            <SwiperSlide key={video.id}>
+            <SwiperSlide key={`${video.id}-${index}`}>
               <div
                 className="slide-wrapper"
-                onClick={() => index === activeIndex && openModal(video.id)}
-                style={{ cursor: index === activeIndex ? 'pointer' : 'default' }}
+                onClick={() => handleSlideClick(index, video.id)}
               >
                 <img
                   src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                   alt={`Video ${video.id}`}
-                  className={
-                    index === activeIndex
-                      ? 'main-slide bordered-glow'
-                      : 'side-slide fade-edge'
-                  }
+                  className={getSlideClass(index)}
                 />
               </div>
             </SwiperSlide>
@@ -63,8 +74,11 @@ export default function ConoceMas() {
       </div>
 
       {showModal && (
-        <div className="video-modal">
-          <div className="modal-content animate-in" onClick={(e) => e.stopPropagation()}>
+        <div className="video-modal fade-in" onClick={closeModal}>
+          <div
+            className="modal-content animate-in"
+            onClick={(e) => e.stopPropagation()}
+          >
             <iframe
               width="100%"
               height="100%"
@@ -74,7 +88,9 @@ export default function ConoceMas() {
               allow="autoplay; encrypted-media"
               allowFullScreen
             ></iframe>
-            <button className="close-button" onClick={closeModal}>✕</button>
+            <button className="close-button" onClick={closeModal}>
+              ✕
+            </button>
           </div>
         </div>
       )}

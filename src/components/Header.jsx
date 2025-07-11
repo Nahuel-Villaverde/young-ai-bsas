@@ -22,8 +22,8 @@ export default function Navbar() {
         <ul className="nav-links">
           <li><a href="#about" className="nav-item" onClick={() => setMenuOpen(false)}>Nuestros principios</a></li>
           <li><a href="#community" className="nav-item" onClick={() => setMenuOpen(false)}>Comunidad</a></li>
-          <li><a href="#socios" className="nav-item" onClick={() => setMenuOpen(false)}>Quienes somos</a></li>
-          <li><a href="#contact" className="nav-item" onClick={() => setMenuOpen(false)}>Conocé más</a></li>
+          <li><a href="#quienesSomos" className="nav-item" onClick={() => setMenuOpen(false)}>Quienes somos</a></li>
+          <li><a href="#conoceMasTitle" className="nav-item" onClick={() => setMenuOpen(false)}>Conocé más</a></li>
         </ul>
       </nav>
     </header>

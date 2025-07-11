@@ -53,13 +53,21 @@
   width: 440px;
   height: 248px;
   opacity: 1;
+  z-index: 2;
+  transform: scale(1);
+  transition: all 0.3s ease;
 }
+
 .side-slide {
   width: 280px;
   height: 160px;
   opacity: 0.4;
   pointer-events: none;
   box-shadow: 0 5px 15px #000106;
+}
+
+.swiper {
+  cursor: grab;
 }
 
 @keyframes fadeEdge {
