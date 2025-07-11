@@ -119,6 +119,36 @@
   }
 }
 
+/* ---------- descripción en hover ---------- */
+.slide-wrapper.hoverable {
+  position: relative;
+}
+
+.hover-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 1, 6, 0.85);
+  color: white;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  z-index: 3;
+}
+
+.slide-wrapper.hoverable:hover .hover-desc {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 /* ---------- borde animado (slide central) ---------- */
 .bordered-glow {
   position: relative;
@@ -229,17 +259,92 @@
   z-index: 2;
 }
 
+.vertical-mode {
+  height: auto;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
 /* ---------- responsive ---------- */
-@media (max-width: 768px) {
-  .main-slide {
-    width: 320px;
-    height: 180px;
-  }
+@media (max-width: 1120px) {
   .side-slide {
     width: 200px;
     height: 120px;
   }
   .fade-mask {
     width: 80px;
+  }
+}
+
+@media (max-width: 995px) {
+  .main-slide {
+    width: 320px;
+    height: 180px;
+  }
+
+  .side-slide {
+    width: 200px;
+    height: 120px;
+  }
+
+  .fade-mask {
+    width: 80px;
+  }
+}
+
+@media (max-width: 779px) {
+  .conoceSwiper {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .swiper {
+    height: 35em;
+    flex-direction: column;
+  }
+
+  .swiper-slide {
+    flex-direction: column;
+  }
+
+  .fade-mask {
+    display: none;
+  }
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .hover-desc {
+    bottom: -8px;
+  }
+}
+
+@media (max-width: 350px) {
+  .conoceSwiper {
+    height: 600px;
+  }
+
+  .swiper {
+    flex-direction: column;
+    height: 35em;
+  }
+
+  .swiper-slide {
+    flex-direction: column;
+  }
+
+  .main-slide {
+    width: 260px;
+    height: 150px;
+  }
+
+  .side-slide {
+    width: 180px;
+    height: 100px;
+  }
+
+  .fade-mask {
+    display: none;
   }
 }

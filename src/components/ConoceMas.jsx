@@ -1,13 +1,19 @@
 import { useState } from "react";
-import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "./ConoceMas.css";
 
 const videos = [
-  { id: "PgMwpmldJVA" },
-  { id: "ddbEg_pB0tQ" },
+  {
+    id: "PgMwpmldJVA",
+    desc: "Resumen del evento AI for Good: oportunidades e innovación con impacto global.",
+  },
+  {
+    id: "ddbEg_pB0tQ",
+    desc: "Primer debate regional sobre el impacto de la IA en América Latina y el Caribe.",
+  },
 ];
 
 export default function ConoceMas() {
@@ -42,15 +48,28 @@ export default function ConoceMas() {
           spaceBetween={30}
           freeMode={true}
           grabCursor={true}
-          loop={false}
+          loop={true}
           centeredSlides={true}
           onSlideChange={(s) => setActive(s.realIndex)}
+          breakpoints={{
+            0: {
+              direction: "vertical",
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            780: {
+              direction: "horizontal",
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
         >
           {videos.map((v, i) => (
             <SwiperSlide key={i}>
               <SlideItem
                 videoId={v.id}
                 isActive={i === active}
+                description={v.desc}
                 onClick={() => i === active && openModal(v.id)}
               />
             </SwiperSlide>
@@ -90,10 +109,10 @@ export default function ConoceMas() {
   );
 }
 
-function SlideItem({ videoId, isActive, onClick }) {
+function SlideItem({ videoId, isActive, description, onClick }) {
   return (
     <div
-      className="slide-wrapper"
+      className={`slide-wrapper ${isActive ? "hoverable" : ""}`}
       onClick={onClick}
       style={{ cursor: isActive ? "pointer" : "default" }}
     >
@@ -104,6 +123,11 @@ function SlideItem({ videoId, isActive, onClick }) {
           isActive ? "main-slide bordered-glow" : "side-slide fade-edge"
         }
       />
+      {isActive && (
+        <div className="hover-desc">
+          <p>{description}</p>
+        </div>
+      )}
     </div>
   );
 }
