@@ -39,7 +39,7 @@ export default function ConoceMas() {
   };
 
   return (
-    <section className="conoce-section">
+    <section id="idConoceMas" className="conoce-section">
       <h2 className="title">Conocé más</h2>
       <div className="conoceSwiper">
         <Swiper

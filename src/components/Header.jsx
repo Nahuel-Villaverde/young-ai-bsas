@@ -23,7 +23,7 @@ export default function Navbar() {
           <li><a href="#about" className="nav-item" onClick={() => setMenuOpen(false)}>Nuestros principios</a></li>
           <li><a href="#community" className="nav-item" onClick={() => setMenuOpen(false)}>Comunidad</a></li>
           <li><a href="#quienesSomos" className="nav-item" onClick={() => setMenuOpen(false)}>Quienes somos</a></li>
-          <li><a href="#conoceMasTitle" className="nav-item" onClick={() => setMenuOpen(false)}>Conocé más</a></li>
+          <li><a href="#idConoceMas" className="nav-item" onClick={() => setMenuOpen(false)}>Conocé más</a></li>
         </ul>
       </nav>
     </header>
