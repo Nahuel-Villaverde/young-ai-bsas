@@ -14,6 +14,22 @@ const videos = [
     id: "ddbEg_pB0tQ",
     desc: "Primer debate regional sobre el impacto de la IA en América Latina y el Caribe.",
   },
+  {
+    id: "cTRz2qtRY5U",
+    desc: "Conversatorio Pensamiento Crítico e IA en Ingeniería. Hablemos de los Humanos.",
+  },
+  {
+    id: "PgMwpmldJVA",
+    desc: "Resumen del evento AI for Good: oportunidades e innovación con impacto global.",
+  },
+  {
+    id: "ddbEg_pB0tQ",
+    desc: "Primer debate regional sobre el impacto de la IA en América Latina y el Caribe.",
+  },
+  {
+    id: "cTRz2qtRY5U",
+    desc: "Conversatorio Pensamiento Crítico e IA en Ingeniería. Hablemos de los Humanos.",
+  },
 ];
 
 export default function ConoceMas() {

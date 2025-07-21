@@ -106,6 +106,13 @@ const miembros = [
     img: "/Lucía-Demeco.webp",
     linkedin: "https://www.linkedin.com/in/lucia-demeco/",
   },
+  {
+    id: 18,
+    nombre: "Julián Balbarrey Harguindeguy",
+    img: "/Julian-Balbarrey-Harguindeguy.webp",
+    linkedin:
+      "https://www.linkedin.com/in/juli%C3%A1n-balbarrey-harguindeguy-588b331b5/",
+  },
 ];
 
 function SliderComunidad() {
@@ -160,9 +167,7 @@ function SliderComunidad() {
         {/* Extras: animan entrada o salida */}
         {(verMas || animando) &&
           extras.map((m, i) => {
-            const idx = animClass === "fadeOutDown"
-              ? extras.length - 1 - i
-              : i;
+            const idx = animClass === "fadeOutDown" ? extras.length - 1 - i : i;
 
             return (
               <Card
